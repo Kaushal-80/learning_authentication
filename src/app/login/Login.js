@@ -16,6 +16,11 @@ const Login = () => {
 
   const handleLogin = async (event) => {
     event.preventDefault();
+    if (loginData.email.trim() === "" || loginData.password.trim() === ""){
+      alert("please enter the data in the field");
+      return;
+    }
+
     try {
       await axios.post('/api/login',loginData).
       then((response) => {
