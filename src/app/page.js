@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
    <>
-    <div>HEllo world</div>
+    <div>HEllo users</div>
     {context.user && (
         <>
           <p>{context.user.name}</p>
